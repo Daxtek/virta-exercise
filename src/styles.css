@@ -1,4 +1,47 @@
-.App {
+body {
+  background-color: #f2f2f2;
+}
+
+.StationTable {
   font-family: sans-serif;
-  text-align: center;
+}
+
+.StationTable > ul {
+  padding: 0;
+}
+
+.stationRow {
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  height: 64px;
+  width: 608px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5px 0 5px 0;
+}
+
+.stationName {
+  color: rgb(34, 34, 34);
+  font-family: IBMPlexSans-Bold;
+  font-size: 16px;
+  font-weight: bold;
+  height: 24px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  width: 101px;
+}
+
+.availabilityState {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f2f2f2;
+  width: max-content;
+  background: rgb(242, 242, 242);
+  border-radius: 12px;
+  height: 24px;
+  width: 102px;
 }
