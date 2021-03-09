@@ -36,7 +36,7 @@ class ActionBar extends React.Component {
     return (
       <div class="actionBar">
         <img id="buttonBack" src={imgArrow} />
-        <h1> Sation Name {this.props.stationName} </h1>
+        <h1> {this.props.stationName} </h1>
       </div>
     );
   }
@@ -45,7 +45,7 @@ class ActionBar extends React.Component {
 export default function StationData() {
   return (
     <div className="StationData">
-      <ActionBar />
+      <ActionBar stationName={"Station Name"} />
       <DataTable />
     </div>
   );
