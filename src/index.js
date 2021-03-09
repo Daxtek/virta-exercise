@@ -1,12 +1,16 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
+import StationTable from "./StationTable";
+import StationData from "./StationData";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <div className="App">
+      <StationTable />
+      <StationData />
+    </div>
   </StrictMode>,
   rootElement
 );

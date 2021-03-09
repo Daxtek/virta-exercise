@@ -1,9 +1,12 @@
 body {
   background-color: #f2f2f2;
-}
-
-.StationTable {
   font-family: sans-serif;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  width: 90%;
+  margin-top: 5%;
 }
 
 .StationTable > ul {
@@ -14,7 +17,6 @@ body {
   background: rgb(255, 255, 255);
   border-radius: 8px;
   height: 64px;
-  width: 608px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -44,4 +46,40 @@ body {
   border-radius: 12px;
   height: 24px;
   width: 102px;
+}
+
+/* Page 2 */
+
+#buttonBack {
+  filter: invert(100%);
+  background: white;
+  height: 48px;
+  width: 48px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#buttonBack:hover {
+  filter: invert(0%);
+  background: none;
+}
+
+.data {
+  margin: 5px;
+}
+
+.label {
+  color: #5f5f5f;
+}
+
+.dataTable {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  border-radius: 8px;
+  background: white;
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
 }

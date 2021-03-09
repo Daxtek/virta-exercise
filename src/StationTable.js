@@ -29,25 +29,15 @@ class StationRow extends React.Component {
   }
 }
 
-class StationTable extends React.Component {
-  render() {
-    return (
-      <div className="StationTable">
-        <h1>Your station</h1>
-        <ul>
-          <StationRow stationName="Test1" available={true} />
-          <StationRow stationName="Test2" available={false} />
-          <StationRow stationName="Test3" available={true} />
-        </ul>
-      </div>
-    );
-  }
-}
-
-export default function App() {
+export default function StationTable() {
   return (
-    <div className="App">
-      <StationTable />
+    <div className="StationTable">
+      <h1>Your station</h1>
+      <ul>
+        <StationRow stationName="Test1" available={true} />
+        <StationRow stationName="Test2" available={false} />
+        <StationRow stationName="Test3" available={true} />
+      </ul>
     </div>
   );
 }
