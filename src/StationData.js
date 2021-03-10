@@ -30,8 +30,13 @@ class DataTable extends React.Component {
 class ActionBar extends React.Component {
   render() {
     return (
-      <div className="actionBar" onClick={() => this.props.onClick()}>
-        <img id="buttonBack" src={imgArrow} alt="Go back" />
+      <div className="actionBar">
+        <img
+          id="buttonBack"
+          src={imgArrow}
+          alt="Go back"
+          onClick={() => this.props.onClick()}
+        />
         <h1> {this.props.stationName} </h1>
       </div>
     );

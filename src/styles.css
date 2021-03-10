@@ -1,5 +1,10 @@
+:root {
+  --gray: #f2f2f2;
+  --white: #ffffff;
+}
+
 body {
-  background-color: #f2f2f2;
+  background-color: var(--gray);
   font-family: sans-serif;
   height: 90%;
   margin-left: auto;
@@ -14,46 +19,47 @@ ul {
 }
 
 .stationRow {
-  background: rgb(255, 255, 255);
+  background: var(--white);
   border-radius: 8px;
   height: 64px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 5px 0 5px 0;
+  justify-content: space-between;
+  margin: 5px 0;
   cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 24px;
+  padding: 0 10px;
 }
 
 .stationName {
   color: rgb(34, 34, 34);
-  font-family: IBMPlexSans-Bold;
   font-size: 16px;
   font-weight: bold;
-  height: 24px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  width: 101px;
+  width: 200px;
 }
 
 .availabilityState {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #f2f2f2;
+  background-color: var(--gray);
   width: max-content;
-  background: rgb(242, 242, 242);
   border-radius: 12px;
   height: 24px;
   width: 102px;
 }
 
-/* Page 2 */
+.availabilityState > img {
+  margin: 0 5px;
+}
+
+/* Page detail */
 
 #buttonBack {
   filter: invert(100%);
-  background: white;
+  background: var(--white);
   height: 48px;
   width: 48px;
   margin-right: 10px;
@@ -75,9 +81,11 @@ ul {
 
 .dataTable {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
   border-radius: 8px;
-  background: white;
+  background-color: white;
+  padding: 1rem;
 }
 
 .actionBar {
