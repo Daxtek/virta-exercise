@@ -15,19 +15,15 @@ class Data extends React.Component {
 
 class DataTable extends React.Component {
   render() {
-    return (
-      <div className="dataTable">
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-        <Data label={"Label"} value={"Value"} />
-      </div>
-    );
+    const stationData = this.props.station;
+    // Go throught the station data to display each element
+    const datas = Object.entries(stationData).map(([label, value]) => {
+      return (
+        <Data key={label} label={label} value={value ? value : "no data"} />
+      );
+    });
+
+    return <div className="dataTable">{datas}</div>;
   }
 }
 
@@ -46,7 +42,6 @@ export default class StationData extends React.Component {
   render() {
     const station = this.props.station;
 
-    console.log(station);
     return (
       <div className="StationData">
         <ActionBar

@@ -20,6 +20,9 @@ class AvailabilityState extends React.Component {
   }
 }
 
+/**
+ * A Row representing a station in the list of stations
+ */
 class StationRow extends React.Component {
   render() {
     return (
@@ -68,7 +71,6 @@ export default class App extends React.Component {
    * @param {Object} station - an Object representing a station's data
    */
   handleClickStation(station) {
-    console.log("station", station);
     this.setState({
       detailView: true,
       station: station
