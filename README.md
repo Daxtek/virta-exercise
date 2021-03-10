@@ -6,7 +6,7 @@ Accessible at: https://codesandbox.io/s/github/Daxtek/virta-exercise
 
 ## Process
 
-This was one of my first app created with React, this was good for me to put in practice my recently learn React bases.
+This was one of my first app created with React, this was good for me to put in practice my recently learn React bases. I also used it to learn and implement new React concept as I was builing the app as example hooks.
 
 I organized myself in the following way:
 
@@ -39,4 +39,4 @@ I can see that I'm not yet fully familliar with the React way of thinking the co
 
 I would maybe also create a button component with the back button as if other pages get added it can be reused.
 
-Also at this point I don't know yet how to fetch data in React so I only imported the json file directly. But if we later add an API to get the station data a fetch function would need to be added.
+After learning about React hooks I implemented a simple function using the fecth API to retrive the json file that could later on fetch the data from an API
