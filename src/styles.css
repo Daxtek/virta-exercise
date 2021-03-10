@@ -9,7 +9,7 @@ body {
   margin-top: 5%;
 }
 
-.stationList > ul {
+ul {
   padding: 0;
 }
 
@@ -22,6 +22,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   margin: 5px 0 5px 0;
+  cursor: pointer;
 }
 
 .stationName {

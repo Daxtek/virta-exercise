@@ -5,8 +5,8 @@ import "./styles.css";
 class Data extends React.Component {
   render() {
     return (
-      <div class="data">
-        <h4 class="label"> {this.props.label}</h4>
+      <div className="data">
+        <h4 className="label"> {this.props.label}</h4>
         <p> {this.props.value} </p>
       </div>
     );
@@ -16,7 +16,7 @@ class Data extends React.Component {
 class DataTable extends React.Component {
   render() {
     return (
-      <div class="dataTable">
+      <div className="dataTable">
         <Data label={"Label"} value={"Value"} />
         <Data label={"Label"} value={"Value"} />
         <Data label={"Label"} value={"Value"} />
@@ -34,19 +34,27 @@ class DataTable extends React.Component {
 class ActionBar extends React.Component {
   render() {
     return (
-      <div class="actionBar">
-        <img id="buttonBack" src={imgArrow} />
+      <div className="actionBar" onClick={() => this.props.onClick()}>
+        <img id="buttonBack" src={imgArrow} alt="Go back" />
         <h1> {this.props.stationName} </h1>
       </div>
     );
   }
 }
 
-export default function StationData() {
-  return (
-    <div className="StationData">
-      <ActionBar stationName={"Station Name"} />
-      <DataTable />
-    </div>
-  );
+export default class StationData extends React.Component {
+  render() {
+    const station = this.props.station;
+
+    console.log(station);
+    return (
+      <div className="StationData">
+        <ActionBar
+          stationName={station.name}
+          onClick={() => this.props.onClick()}
+        />
+        <DataTable station={station} />
+      </div>
+    );
+  }
 }
