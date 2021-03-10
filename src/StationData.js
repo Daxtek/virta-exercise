@@ -2,6 +2,9 @@ import React from "react";
 import imgArrow from "./img/icon_arrow--left.svg";
 import "./styles.css";
 
+/**
+ * The component respresenting one data element of a station, it has a label and a value
+ */
 class Data extends React.Component {
   render() {
     return (
@@ -13,6 +16,9 @@ class Data extends React.Component {
   }
 }
 
+/**
+ * The component respresenting table with all the data from one station
+ */
 class DataTable extends React.Component {
   render() {
     const stationData = this.props.station;
@@ -27,6 +33,9 @@ class DataTable extends React.Component {
   }
 }
 
+/**
+ * The component respresenting button and title
+ */
 class ActionBar extends React.Component {
   render() {
     return (
@@ -43,6 +52,9 @@ class ActionBar extends React.Component {
   }
 }
 
+/**
+ * The component respresenting the station data details, made of a action bar title and the table of data
+ */
 export default class StationData extends React.Component {
   render() {
     const station = this.props.station;

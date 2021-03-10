@@ -5,6 +5,9 @@ import imgOffline from "./img/icon_offline.svg";
 import stationDataJson from "./Front-end_assignment_station_data.json";
 import StationData from "./StationData";
 
+/**
+ * The div element representing the availabilty state of the station, contain an image and a text
+ */
 class AvailabilityState extends React.Component {
   render() {
     const textAvailability = this.props.available ? "Available" : "Offline";
@@ -21,7 +24,7 @@ class AvailabilityState extends React.Component {
 }
 
 /**
- * A Row representing a station in the list of stations
+ * A Row representing a station in the list of stations as an li element
  */
 class StationRow extends React.Component {
   render() {
@@ -37,8 +40,12 @@ class StationRow extends React.Component {
   }
 }
 
+/**
+ * The component representing the list of station with a title and the list
+ */
 class StationList extends React.Component {
   render() {
+    //Go throught each station to return the row with the associated data
     const stations = stationDataJson.map((station) => {
       return (
         <StationRow
@@ -56,6 +63,10 @@ class StationList extends React.Component {
     );
   }
 }
+
+/**
+ * The main component, where we will display either the list of stations or the station details
+ */
 
 export default class App extends React.Component {
   constructor(props) {
@@ -78,7 +89,7 @@ export default class App extends React.Component {
   }
 
   /**
-   * Handle the click to go back to the station list by changing the state
+   * Handle the click to go back to the station list by changing the state to is initial values
    */
   handleClickBack() {
     this.setState({
