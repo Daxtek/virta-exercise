@@ -44,9 +44,6 @@ class StationRow extends React.Component {
  */
 class StationList extends React.Component {
   render() {
-    const test = this.props.stations;
-    console.log("test", test);
-
     //Go throught each station to return the row with the associated data
     const stations = this.props.stations.map((station) => {
       return (
